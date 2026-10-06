@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黃山捷徑路線 • 65歲男性遊覽性評估</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
+    background: #f4f6f9; color: #2b2f36; line-height: 1.75; font-size: 15px;
+  }
+  .page { max-width: 940px; margin: 0 auto; padding: 28px 18px 60px; }
+  header.page-head { margin-bottom: 20px; }
+  header.page-head h1 { font-size: 24px; letter-spacing: 1px; margin-bottom: 6px; }
+  header.page-head .meta { font-size: 12.5px; color: #8a93a3; }
+  .card {
+    background: #fff; border-radius: 12px; padding: 20px 22px; margin-bottom: 18px;
+    box-shadow: 0 1px 4px rgba(20,30,50,.06); border: 1px solid #e8ecf1;
+  }
+  .assess { background: #fffbe8; border: 1px solid #f0d98a; }
+  .assess h2 { font-size: 17px; margin-bottom: 8px; }
+  .assess .verdict { display: inline-block; background: #b7791f; color: #fff; font-size: 12px; border-radius: 20px; padding: 2px 12px; margin-left: 8px; vertical-align: middle; }
+  .bar { height: 8px; border-radius: 6px; background: linear-gradient(to right, #43a047 0 40%, #fdd835 40% 70%, #e53935 70% 100%); margin: 10px 0 4px; }
+  .bar-labels { display: flex; justify-content: space-between; font-size: 12px; color: #8a93a3; margin-bottom: 10px; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  @media (max-width: 640px) { .compare { grid-template-columns: 1fr; } }
+  .cmp { border-radius: 12px; padding: 18px 20px; border: 1px solid; }
+  .cmp.bad { background: #fdeeee; border-color: #f3c1c1; }
+  .cmp.good { background: #e9f7ec; border-color: #b7dfbe; }
+  .cmp h3 { font-size: 15px; margin-bottom: 8px; }
+  .cmp .mins { font-size: 30px; font-weight: 700; }
+  .cmp .mins small { font-size: 15px; font-weight: 400; }
+  .cmp ul { list-style: none; font-size: 13.5px; margin-top: 8px; color: #4a515c; }
+  .cmp ul li { margin-bottom: 3px; }
+  .cmp .note { font-size: 13px; margin-top: 8px; font-weight: 600; }
+  .cmp.bad .note { color: #b3261e; } .cmp.good .note { color: #2e7d32; }
+  h2.sec { font-size: 18px; margin: 30px 0 14px; padding-left: 12px; border-left: 5px solid #2f7cf6; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
+  @media (max-width: 640px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  .stat { background: #fff; border: 1px solid #e8ecf1; border-radius: 10px; padding: 14px 12px; text-align: center; }
+  .stat .k { font-size: 12px; color: #8a93a3; margin-bottom: 4px; }
+  .stat .v { font-size: 21px; font-weight: 700; }
+  .stat .v small { font-size: 13px; font-weight: 400; color: #5a6270; }
+  .stat .d { font-size: 11.5px; color: #9aa3b2; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; font-size: 13.5px; margin-bottom: 8px; }
+  th, td { padding: 10px 8px; text-align: left; border-bottom: 1px solid #eef1f5; }
+  th { background: #f6f8fb; font-size: 12.5px; color: #6b7484; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  tr.hl-red td { background: #fdf0f0; } tr.hl-green td { background: #f0f9f1; } tr.hl-yellow td { background: #fffdf4; }
+  .badge { display: inline-block; font-size: 12px; border-radius: 6px; padding: 2px 8px; white-space: nowrap; }
+  .b-green { background: #e6f4ea; color: #1e7e34; } .b-yellow { background: #fff3cd; color: #9a6b0f; } .b-red { background: #fde2e2; color: #b3261e; }
+  .tbl-note { font-size: 12px; color: #8a93a3; margin: 6px 2px 18px; }
+  .risk { border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; border: 1px solid; }
+  .risk h3 { font-size: 15.5px; margin-bottom: 8px; }
+  .risk p { font-size: 14px; }
+  .r-red { background: #fdeeee; border-color: #f3c1c1; }
+  .r-yellow { background: #fffbe8; border-color: #f0d98a; }
+  .r-gray { background: #f1f4f8; border-color: #d7dde6; }
+  .r-green { background: #e9f7ec; border-color: #b7dfbe; }
+  .tip-inline { background: #eef4ff; border: 1px solid #c3d6f5; border-radius: 10px; padding: 14px 16px; font-size: 13.5px; margin: 14px 0 18px; }
+  .warn { background: #fffbe8; border: 1px solid #f0d98a; border-radius: 10px; padding: 14px 16px; font-size: 13.5px; margin-bottom: 18px; }
+  .warn strong, .tip-inline strong { display: block; margin-bottom: 4px; }
+  .timeline { list-style: none; margin: 6px 0 18px; }
+  .timeline li { position: relative; padding: 0 0 18px 18px; border-left: 2px solid #dfe5ee; margin-left: 8px; }
+  .timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2px solid #9aa7bd; }
+  .timeline li.hot::before { border-color: #e53935; background: #e53935; }
+  .timeline li.warm::before { border-color: #f0a22e; background: #f0a22e; }
+  .timeline li.cool::before { border-color: #2f9e44; background: #2f9e44; }
+  .timeline .t { font-weight: 700; font-size: 14.5px; }
+  .timeline .ev { font-weight: 600; }
+  .timeline .de { font-size: 13px; color: #5a6270; }
+  .timeline .sub { font-size: 12.5px; color: #8a93a3; background: #f6f8fb; border-radius: 8px; padding: 8px 10px; margin-top: 6px; }
+  .cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  @media (max-width: 640px) { .cols2 { grid-template-columns: 1fr; } }
+  .check-card { background: #fff; border: 1px solid #e8ecf1; border-radius: 12px; padding: 18px 20px; }
+  .check-card h3 { font-size: 15px; margin-bottom: 10px; }
+  .check-card ul { list-style: none; font-size: 13.5px; }
+  .check-card ul li { margin-bottom: 7px; padding-left: 4px; }
+  .check-card ul li::before { content: "• "; color: #2f7cf6; font-weight: 700; }
+  footer { margin-top: 26px; font-size: 12px; color: #9aa3b2; line-height: 1.8; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="page-head">
+  <h1>黃山捷徑路線 • 65歲男性遊覽性評估</h1>
+  <div class="meta">路線：後山直上光明頂 → 前山一般景點路線 ｜ 數據來源：OSM 步道網絡（OSRM foot）+ 高程 POI 座標交叉驗證 ｜ 主查日期 2025-10-03</div>
+</header>
+
+<div class="card assess">
+  <h2>可以做，但原版路線偏激進——需做兩處調整<span class="verdict">中度負擔 3/5</span></h2>
+  <div class="bar"></div>
+  <div class="bar-labels"><span>輕鬆</span><span>中度</span><span>吃力</span></div>
+  <p style="font-size:13.5px;color:#6b7484;margin-bottom:10px;">體力結論：綠→ ★★★☆☆ 黃（視65歲體能而定）</p>
+  <p><strong>核心結論：</strong>搭最省力的交通走法是對的（雲谷上、玉屏下），避開了黃山最耗體力的上下山段，等於把「爬一座山」降級成「在海拔 1600–1860 m 的平台上走 5 公里路徑」。對 65 歲男性，這是可行的。</p>
+  <p style="margin-top:8px;">但原版路線有 424 m 累計爬升、含一段 32% 平均坡度的陡坡（百步雲梯→蓮花峰）。對 65 歲價值，按建議調整後可降到 310 m 爬升、最陡段控制在 17%，即成為一條從容的一日路線。</p>
+</div>
+
+<div class="compare">
+  <div class="cmp bad">
+    <h3>✕ 原版（登蓮花峰頂）</h3>
+    <div class="mins">268 <small>分</small></div>
+    <ul>
+      <li>純步行 4.5 小時 ｜ 6.15 km</li>
+      <li>爬升 424 m ｜ 下降 454 m</li>
+    </ul>
+    <p class="note">不建議：末段 32% 陡坡 + 24% 長下坡，膝關節與心肺負擔大</p>
+  </div>
+  <div class="cmp good">
+    <h3>☑ 銀髮調整版（蓮花亭繞行）</h3>
+    <div class="mins">238 <small>分</small></div>
+    <ul>
+      <li>純步行 4.0 小時 ｜ 5.80 km</li>
+      <li>爬升 310 m ｜ 下降 330 m</li>
+    </ul>
+    <p class="note">建議採用：少爬 114 m、少降 124 m、省 30 分，最陡段降為 17%</p>
+  </div>
+</div>
+
+<h2 class="sec">一、路線數據驗證</h2>
+
+<div class="stats">
+  <div class="stat"><div class="k">總距離</div><div class="v">5.80<small> km</small></div><div class="d">銀髮版（原版 6.15 km）</div></div>
+  <div class="stat"><div class="k">累計爬升</div><div class="v">310<small> m</small></div><div class="d">原版 424 m</div></div>
+  <div class="stat"><div class="k">累計下降</div><div class="v">330<small> m</small></div><div class="d">原版 454 m</div></div>
+  <div class="stat"><div class="k">海拔區間</div><div class="v">1600–1860<small> m</small></div><div class="d">最高點光明頂</div></div>
+  <div class="stat"><div class="k">純步行</div><div class="v">238<small> 分</small></div><div class="d">約 4.0 小時，含休息緩衝</div></div>
+  <div class="stat"><div class="k">全程含交通</div><div class="v">8.2<small> 小時</small></div><div class="d">07:00 出發 – 15:10 返回</div></div>
+  <div class="stat"><div class="k">索道覆蓋</div><div class="v">2<small> 段</small></div><div class="d">雲谷上 + 玉屏下</div></div>
+  <div class="stat"><div class="k">最陡坡度</div><div class="v">17<small> %</small></div><div class="d">銀髮版（原版 32%）</div></div>
+</div>
+
+<div class="card" style="padding:6px 6px 2px;">
+<table>
+  <caption style="text-align:left;font-weight:700;padding:14px 12px 6px;font-size:14.5px;">遊程明細（依 65 歲步速重算）</caption>
+  <tr><th>路段</th><th>步道距離</th><th>落差</th><th>平均坡度</th><th>一般成人</th><th>65歲</th><th>評估</th></tr>
+  <tr class="hl-green"><td>白鵝嶺 → 黑虎松</td><td>0.34 km</td><td>−40 m</td><td>11.7%</td><td>8 分</td><td>14 分</td><td><span class="badge b-green">陡下坡</span></td></tr>
+  <tr class="hl-green"><td>黑虎松 → 北海</td><td>0.37 km</td><td>−30 m</td><td>8.2%</td><td>8 分</td><td>14 分</td><td><span class="badge b-green">平緩</span></td></tr>
+  <tr class="hl-green"><td>北海 → 排雲亭</td><td>1.14 km</td><td>−30 m</td><td>2.6%</td><td>24 分</td><td>31 分</td><td><span class="badge b-green">最長但最平</span></td></tr>
+  <tr class="hl-yellow"><td>排雲亭 → 飛來石</td><td>0.79 km</td><td>+130 m</td><td>16.4%</td><td>26 分</td><td>42 分</td><td><span class="badge b-yellow">連續上坡</span></td></tr>
+  <tr class="hl-yellow"><td>飛來石 → 光明頂</td><td>0.75 km</td><td>+130 m</td><td>17.3%</td><td>25 分</td><td>41 分</td><td><span class="badge b-yellow">連續上坡</span></td></tr>
+  <tr class="hl-green"><td>光明頂 → 鰲魚峰</td><td>0.76 km</td><td>−80 m</td><td>10.5%</td><td>17 分</td><td>25 分</td><td><span class="badge b-green">下坡</span></td></tr>
+  <tr class="hl-yellow"><td>鰲魚峰 → 百步雲梯</td><td>0.44 km</td><td>−80 m</td><td>18.2%</td><td>11 分</td><td>18 分</td><td><span class="badge b-yellow">陡下、膝蓋</span></td></tr>
+  <tr class="hl-red"><td>百步雲梯 → 蓮花峰</td><td>0.51 km</td><td>+164 m</td><td>32.2%</td><td>23 分</td><td>41 分</td><td><span class="badge b-red">✕ 極陡坡</span></td></tr>
+  <tr class="hl-red"><td>蓮花峰 → 迎客松</td><td>0.77 km</td><td>−184 m</td><td>23.9%</td><td>20 分</td><td>31 分</td><td><span class="badge b-red">✕ 長陡下坡</span></td></tr>
+  <tr class="hl-yellow"><td>百步雲梯 → 蓮花亭（繞行）</td><td>0.12 km</td><td>+50 m</td><td>41.7%</td><td>—</td><td>15 分</td><td><span class="badge b-yellow">短陡、但 120 m</span></td></tr>
+  <tr class="hl-green"><td>蓮花亭 → 迎客松（繞行）</td><td>0.81 km</td><td>−70 m</td><td>8.7%</td><td>—</td><td>26 分</td><td><span class="badge b-green">☑ 緩下好走</span></td></tr>
+  <tr class="hl-green"><td>迎客松 → 玉屏索道上站</td><td>0.28 km</td><td>−10 m</td><td>3.6%</td><td>6 分</td><td>11 分</td><td><span class="badge b-green">平路</span></td></tr>
+</table>
+</div>
+<p class="tbl-note">坡度 = 落差絕對值 ÷ 步道距離，為平均坡度，實際石階路段會曲折更陡。65 歲時間模型：步道 2.8 km/h + 上坡每 100 m 加 15 分 + 下坡每 100 m 加 5 分 + 每段 5 分休息緩衝。</p>
+
+<h2 class="sec">二、對 65 歲的三個風險點</h2>
+
+<div class="risk r-red">
+  <h3>🛑 風險 1　百步雲梯 → 蓮花峰：32% 陡坡（164 m 爬升 / 510 m）</h3>
+  <p>這是全線最硬的一段。蓮花峰是連續石階、局部坡度遠超平均值，中途無平台可休息。65 歲在此處最易出現心肺過載與大腿力竭。<strong>建議：直接繞行</strong>，改走蓮花亭繞行，只需多付 120 m 的短陡段（50 m 爬升），銜接 810 m 緩下坡直達迎客松——難度完全不同。</p>
+</div>
+<div class="risk r-yellow">
+  <h3>⚠ 風險 2　蓮花峰 → 迎客松：184 m 連續下坡（24%）</h3>
+  <p>下坡對膝關節的衝擊是上坡的 3–4 倍。這段長約 770 m、降 184 m，是膝蓋最傷的一段。若膝關節已有退化，此段應配登山杖＋護膝，並採「小步慢降、腳跟著地」的走法。繞行版本直接換成 810 m 緩下 70 m 的緩坡，壓力大幅下降。</p>
+</div>
+<div class="risk r-gray">
+  <h3>🏔 風險 3　海拔 1600–1864 m 的高原反應</h3>
+  <p>黃山主峰海拔算高，多數人無感。但 65 歲若有高血壓、冠心病、心律不整，在 1860 m 處心臟負荷仍會上升 10–20%。建議：上山前 30 分鐘避免濃茶；全程心率控制在「能正常說話」的強度，出現頭暈、胸悶、噁心要立即停止並求助（景區救援 0559-5561111）。</p>
+</div>
+<div class="risk r-green">
+  <h3>☑ 造修線給 65 歲最大的優勢：雙索道覆蓋</h3>
+  <p>雲谷索道上（+810 m）、玉屏索道下（−820 m），等於把爬上山 1630 m 的垂直落差全部交給纜車。如果改成步行上下山，這條線對 65 歲就是不可能的任務。雙索道是這條路線成立的前提，務必保留，不要為了省錢（想走完全程）而改步行。</p>
+</div>
+
+<h2 class="sec">三、建議行程表（銀髮調整版 • 蓮花亭繞行）</h2>
+<p style="font-size:13.5px;color:#5a6270;margin-bottom:14px;">假設 07:00 抵達換乘中心，全程 8 小時 10 分，15:10 前回到大門——比末班索道預班（16:30–17:00）早 1 小時以上，緩衝充足。</p>
+
+<ul class="timeline">
+  <li><span class="t">07:00</span>　<span class="ev">南大門（湯口）換乘中心</span><div class="de">海拔 420 m。出發：湯口→雲谷寺→索道上山。避免假日排隊</div></li>
+  <li><span class="t">07:20</span>　<span class="ev">景區大巴 → 雲谷寺</span><div class="de">車程 20 分，¥19。雲谷公路，易暈車者坐前排、備暈車藥</div></li>
+  <li><span class="t">07:40</span>　<span class="ev">雲谷寺 • 索道站</span><div class="de">海拔約 890 m。旺季排隊可能 1–2 小時，這是全天最大變數</div></li>
+  <li><span class="t">08:00</span>　<span class="ev">雲谷索道上山 → 白鵝嶺</span><div class="de">¥80，車程約 8 分，拉升海拔 1700 m，開始步行</div></li>
+  <li><span class="t">08:10</span>　<span class="ev">白鵝嶺休息 • 適應海拔</span><div class="de">10 分鐘，泡杯水、上廁所、補充方向</div><div class="sub">⚠ 出發前確認「西」（光明頂方向），不要走北——北邊是往返支線，進去要原路折返</div></li>
+  <li><span class="t">08:25</span>　<span class="ev">黑虎松</span><div class="de">0.34 km，14 分，−40 m，海拔 1660 m，路邊即走</div></li>
+  <li><span class="t">08:40</span>　<span class="ev">北海</span><div class="de">0.37 km，14 分，−30 m，海拔 1630 m，不拍獅子峰／清涼台</div></li>
+  <li><span class="t">09:15</span>　<span class="ev">排雲亭</span><div class="de">1.14 km，31 分，海拔 1600 m，全線最長但最平緩的一段</div><div class="sub">☑ 全程唯一觀景停留點。西海大峽谷入口在此——65 歲建議不要下谷（−500 m，留 500 m 是深淵）</div></li>
+  <li><span class="t">09:25</span>　<span class="ev">排雲亭休息</span><div class="de">10 分鐘，望望風景／補充水分</div></li>
+  <li class="warm"><span class="t">10:10</span>　<span class="ev">飛來石</span><div class="de">0.79 km，42 分，+130 m（16.4%），海拔 1730 m，連續上坡，慢走不停歇</div></li>
+  <li><span class="t">10:20</span>　<span class="ev">飛來石休息</span><div class="de">10 分鐘，第一個爬升段結束，務必坐下休息</div></li>
+  <li class="hot"><span class="t">11:05</span>　<span class="ev">光明頂</span><div class="de">0.75 km，41 分，+130 m（17.3%），海拔 1860 m，連續爬坡，全線最高點</div></li>
+  <li><span class="t">11:05–45</span>　<span class="ev">光明頂午餐 • 大休息</span><div class="de">40 分鐘，補給乾糧熱水（山上僅有簡易小賣），補充鈉與水分</div><div class="sub">☑ 若天氣晴，遠眺蓮花峰（南邊）；也順便確認好天氣（也備雨）</div></li>
+  <li><span class="t">12:15</span>　<span class="ev">鰲魚峰</span><div class="de">0.76 km，25 分，−80 m，海拔 1780 m，下坡，注意腳踝</div></li>
+  <li><span class="t">12:25</span>　<span class="ev">鰲魚峰休息</span><div class="de">10 分鐘，為接下來陡下坡做準備，檢查護膝</div></li>
+  <li class="warm"><span class="t">12:45</span>　<span class="ev">百步雲梯（谷底）</span><div class="de">0.44 km，18 分，−80 m（18.2%），海拔 1700 m，陡下，雙杖支撐</div></li>
+  <li><span class="t">12:45–13:00</span>　<span class="ev">關鍵決策點：蓮花峰登頂 vs 繞行</span><div class="de">15 分休息，同時觀察天氣</div><div class="sub">☑ 建議繞行：往蓮花亭方向走，+50 m 短陡即接 810 m 緩坡<br>⚠ 若登頂：+164 m（32%）陡上 41 分，多 30 分且膝蓋代價大</div></li>
+  <li><span class="t">13:15</span>　<span class="ev">蓮花亭（繞行）</span><div class="de">0.12 km，15 分，+50 m，海拔 1750 m，短陡，但只有 120 m</div></li>
+  <li class="cool"><span class="t">13:45</span>　<span class="ev">迎客松 • 玉屏樓</span><div class="de">0.81 km，26 分，−70 m（8.7%），海拔 1680 m，緩下坡，好走，黃山最強打卡點</div></li>
+  <li><span class="t">13:45–14:05</span>　<span class="ev">玉屏樓休息</span><div class="de">20 分鐘，拍照，體力已消耗大半，好好歇</div></li>
+  <li><span class="t">14:20</span>　<span class="ev">玉屏索道上站</span><div class="de">0.28 km，11 分，海拔 1670 m</div></li>
+  <li><span class="t">14:50</span>　<span class="ev">玉屏索道下行 → 慈光閣</span><div class="de">¥90，−820 m，含排隊約 30 分，末班約 16:30–17:00，本表提前 1.5 小時以上</div></li>
+  <li class="cool"><span class="t">15:10</span>　<span class="ev">慈光閣 → 南大門</span><div class="de">景區大巴 ¥19，約 20 分，行程結束</div></li>
+</ul>
+
+<div class="tip-inline"><strong>💡 體力分配提示</strong>上午（08:10–11:05）爬升 260 m，佔全天 84%；下午（11:45 後）幾乎全是下坡。這是刻意的安排——把耗體力的爬升放在上午體力最好的時段，下午順坡收尾。對 65 歲這個分配尤其重要。</div>
+
+<h2 class="sec">四、體力不支時的撤退點</h2>
+<div class="card" style="padding:6px 6px 2px;">
+<table>
+  <tr><th>位置</th><th>時間</th><th>撤退方案</th><th>代價</th></tr>
+  <tr><td>排雲亭</td><td>09:15</td><td>原路折返北海 → 白鵝嶺 → 雲谷索道下山。此時只走了 1.85 km，尚未開始大爬升，撤退成本最低</td><td>約 60 分鐘回白鵝嶺</td></tr>
+  <tr><td>光明頂</td><td>11:05</td><td>① 走回北海 → 白鵝嶺 → 雲谷索道下（最穩）② 纜行至天海 → 西海觀光纜車（¥100）→ 排雲亭等索道折返</td><td>方案① 約 90 分，方案② 約 90 分</td></tr>
+  <tr><td>鰲魚峰</td><td>12:15</td><td>已無捷徑撤退點。往前到玉屏索道（約 1.5 km 下坡）比往回好——繼續前進是較快解脫</td><td>往前約 55 分</td></tr>
+  <tr><td>迎客松</td><td>13:45</td><td>已到玉屏樓，索道站僅 280 m。若體能超支，步行下山至慈光閣約 3 小時——對 65 歲極不建議</td><td>—，務必搭索道</td></tr>
+</table>
+</div>
+
+<div class="warn"><strong>⚠ 最重要的一條：14:20 前必須到玉屏索道上站。</strong>本表約 16:30–17:00，留 2 小時緩衝是為了應付索道臨時停運（大風／雷雨天常見）、排隊暴增或體力突發狀況。錯過末班要步行下山 3 小時，對 65 歲是風險事件。</div>
+
+<h2 class="sec">五、健康檢查與裝備</h2>
+<div class="cols2">
+  <div class="check-card">
+    <h3>🏥 出發前健康自查（有任一項請先諮詢醫師）</h3>
+    <ul>
+      <li>近 6 個月內有心臟手術、中風、重大手術史</li>
+      <li>血壓控制不佳（收縮壓 &gt;160）</li>
+      <li>冠心病／心絞痛、裝有支架</li>
+      <li>嚴重心律不整或需服氧氣筒</li>
+      <li>膝關節重度退化，醫囑術後未滿一年</li>
+      <li>嚴重的慢性阻塞性肺病／氣喘</li>
+      <li>近期眩暈、反覆跌倒</li>
+    </ul>
+    <p style="font-size:12.5px;color:#8a93a3;margin-top:8px;">若以上皆無，且平時有快走、游泳、太極等規律運動習慣，此路線安全範圍圖。</p>
+  </div>
+  <div class="check-card">
+    <h3>🎒 必備裝備（65歲版）</h3>
+    <ul>
+      <li><strong>登山杖</strong> —— 不是選配。下坡分擔 20–30% 膝蓋受力</li>
+      <li>護膝（有膝傷不建議不戴）</li>
+      <li>防滑登山鞋 —— 石階沾水滑，穿平底／皮鞋</li>
+      <li>保暖外套 —— 山頂山下溫差 8–12°C，且風大</li>
+      <li>雨衣（非雨傘，山上風大會開傘）</li>
+      <li>常用藥物＋硝酸甘油／保心丸（諮詢開立者）</li>
+      <li>水 1–1.5 L＋鹽糖補給（山裡補給點少或貴食盒）</li>
+      <li>行動電源、離線地圖（山區訊號斷斷續續）</li>
+    </ul>
+  </div>
+</div>
+<div class="tip-inline"><strong>💡 給同行者的建議</strong>不要讓 65 歲者落單。至少一名同伴全程同行，並約定「每 30 分鐘回報一次體感」。法上採用「慢、穩、多停」：寧可多花 1 小時，也不要為了超時間而加速——對 65 歲而言，心率穩定比抵達抵達重要得多。若時間真的不夠，砍景點（跳過飛來石）而不是加速。</div>
+
+<h2 class="sec">六、費用與實務</h2>
+<div class="card" style="padding:6px 6px 2px;">
+<table>
+  <tr><th>項目</th><th>金額</th><th>備註</th></tr>
+  <tr><td>景區門票（旺季）</td><td>¥190</td><td>淡季 ¥150；60 歲以上半價 ¥95（憑身份證）</td></tr>
+  <tr><td>景區大巴（南門→雲谷寺）</td><td>¥19</td><td>單程</td></tr>
+  <tr><td>雲谷索道（上行）</td><td>¥80</td><td>單程</td></tr>
+  <tr><td>玉屏索道（下行）</td><td>¥90</td><td>單程</td></tr>
+  <tr><td>景區大巴（慈光閣→南門）</td><td>¥19</td><td>單程</td></tr>
+  <tr><td><strong>合計（65歲優惠價）</strong></td><td><strong>¥303</strong></td><td>若無優惠則 ¥398</td></tr>
+</table>
+</div>
+<div class="warn"><strong>⚠ 兩項必須提前處理的事</strong>① 實名預約：黃山風景區全面實名分時預約，透過「黃山旅遊」微信／支付寶小程序，務必提前 1–3 天約。旺季當日會滿。<br>② 索道排隊：旺季雲谷索道 08:00 後排隊可能 2–3 小時。對策：07:00 前到換乘中心（本表時間），或出發前查「黃山」官方的即時客流。<br>另：蓮花峰和天都峰五年輪換開放——本行程已建議不登蓮花峰，故不受影響；若仍想登頂，需先確認當期開放的是哪一座並提前預約。</div>
+
+<footer>
+  路線數據：OSM 步道網絡 OSRM foot 步距計算，景點座標經 POI 與 OSM Nominatim 交叉驗證（16 個 POI 中 13 個差距 &lt;100 m）。地形高程為平均 DEM 估算，實際石階路線因曲折、65 歲步速依坡度曲線模型。天氣、客流有異。本表僅供參考，請以官方公告為準。景區救援 0559-5561111。健康建議不能代替專業意見，有慢性病史者請先諮詢醫師。
+</footer>
+
+</div>
+</body>
+</html>
